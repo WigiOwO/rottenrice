@@ -1,0 +1,70 @@
+{
+	"layer": "top",
+	"position": "top",
+	"margin-top": 10,
+	"margin-left": 10,
+	"margin-right": 10,
+	"margin-bottom": 0,
+	"height": 40,
+
+	//left
+	"modules-left": ["mpris"],
+       	
+	"mpris": {
+		"interval": 1,
+		"album-len": 0,
+		"format": "{player_icon} {dynamic}",
+		"format-paused": "{status_icon} <i>{dynamic}</i>",
+		"player-icons": {
+			"default": "▶",
+		"mpv": "🎵"
+	},
+		"status-icons": {
+		"paused": "⏸"
+	}
+
+},	
+	 //center
+ 	"modules-center":["clock","hyprland/workspaces","clock#right"],
+
+    	"clock#right":{
+		"format":"  {:%Y-%m-%d}",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+
+	},
+	"hyprland/workspaces": {
+		"justify": "center"
+		},
+
+	
+
+	//right
+	"modules-right":["hyprland/window","memory","cpu"],
+	"memory":{
+		"interval": 1,
+		"format": "{icon} {used:0.1f}G/{total:0.1f}G ",
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+		"rotate": 0,
+		"align": 0
+	},
+	"cpu":{
+		"interval": 1,
+		"format": "{icon0}{icon1}{icon2}{icon3} {usage:>2}% ",
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]	},
+	"hyprland/window":{
+		"format":"{}",
+		"rewrite":{
+			"(.*) - Brave": "Brave",
+			"(.*) - alacritty": "wigi"},
+		"max-length": 15,
+		"min-length": 15,
+		"justify":"right"
+
+	}
+
+},
+{
+	"layer":"top",
+	"position":"bottom",
+	"module-center": ["hyprland/workspaces"]
+}

@@ -1,0 +1,44 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 13px;
+  color: #e0e0ff;
+  border: none;
+}
+
+window {
+  background-color:transparent;
+  border-radius: 12px;
+  padding: 5px;
+}
+
+#mpris,
+#window,
+#clock,
+#cpu,
+#memory {
+  padding: 0 10px;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #4e2a84, #9b59b6);
+  margin: 3px 6px;
+}
+#custom-cpu, #custom-ram {
+  font-family: monospace;
+  font-weight: bold;
+  color: #d1aaff;
+}
+.center-box {
+	color: black;
+}
+
+tooltip {
+    background: #141414;
+    border-radius: 4px;
+}
+
+#workspaces {
+	background: transparent;
+}
+#workspaces button.active {
+	background: linear-gradient(145deg,#4e2a84,#9b59b6);
+}
+
